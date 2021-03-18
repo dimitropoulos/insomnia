@@ -8,18 +8,18 @@
   "main": "app/main.min.js",
   "scripts": {
     "typecheck": "flow check",
-    "test": "npm run test:jest",
+    "test": "yarn test:jest",
     "test:jest": "cross-env NODE_ENV=test jest --silent",
-    "test-appveyor": "npm run test -- --maxWorkers 1",
+    "test-appveyor": "yarn test -- --maxWorkers 1",
     "start:electron": "cross-env NODE_ENV=development webpack --config ./webpack/webpack.config.electron.babel.js && electron .",
     "start:dev-server": "webpack-dev-server --config ./webpack/webpack.config.development.babel.js",
-    "start": "concurrently -n dev,app --kill-others \"npm run start:dev-server\" \"npm run start:electron\"",
+    "start": "concurrently -n dev,app --kill-others \"yarn start:dev-server\" \"yarn start:electron\"",
     "storybook": "start-storybook --port 3222",
     "build": "node ./scripts/build.js",
     "build:sr": "webpack --config send-request/webpack.config.babel.js",
     "package": "node ./scripts/package.js",
     "release": "node ./scripts/release.js",
-    "bootstrap": "rimraf node_modules/graphql-language-service-interface/dist/*.flow && npm run build:sr"
+    "bootstrap": "rimraf node_modules/graphql-language-service-interface/dist/*.flow && yarn build:sr"
   },
   "dev": {
     "dev-server-port": 3334

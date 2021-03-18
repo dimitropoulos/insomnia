@@ -6,8 +6,8 @@
     "typecheck": "flow check",
     "test": "jest",
     "build": "webpack --config webpack.config.js --display errors-only",
-    "bootstrap": "npm run build",
-    "prepublish": "npm run build"
+    "bootstrap": "yarn build",
+    "prepublish": "yarn build"
   },
   "jest": {
     "testMatch": [

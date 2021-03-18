@@ -27,14 +27,14 @@ jobs:
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
       - name: Bootstrap packages
-        run: npm run bootstrap
+        run: yarn bootstrap
       - name: Run tests
         run: npm test
       - name: Build for smoke tests
-        run: npm run app-build:smoke
+        run: yarn app-build:smoke
       - name: Run smoke tests
         timeout-minutes: 10 # sometimes jest fails to exit - https://github.com/facebook/jest/issues/6423#issuecomment-620407580
-        run: npm run test:smoke:build
+        run: yarn test:smoke:build
       - name: Upload smoke test screenshots
         uses: actions/upload-artifact@v2
         if: always()
@@ -43,4 +43,4 @@ jobs:
           name: ${{ matrix.os }}-smoke-test-screenshots-${{ github.run_number }}
           path: packages/insomnia-smoke-test/screenshots
       - name: Run CLI smoke tests
-        run: npm run test:smoke:cli
+        run: yarn test:smoke:cli

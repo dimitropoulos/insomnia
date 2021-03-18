@@ -10,13 +10,13 @@
     "typecheck": "flow check",
     "jest": "jest",
     "jest:watch": "jest --watch",
-    "test": "npm run typecheck && npm run jest",
+    "test": "yarn typecheck && yarn jest",
     "build": "webpack --config webpack/webpack.prod.js --display errors-only",
     "watch": "webpack --config webpack/webpack.dev.js --watch",
     "build-storybook": "build-storybook --quiet",
     "storybook": "start-storybook --port 3223",
     "convert-svg": "rimraf assets/svgr && svgr --out-dir assets/svgr assets && rimraf assets/svgr/index.js",
-    "prepare": "npm run convert-svg && npm run build"
+    "prepare": "yarn convert-svg && yarn build"
   },
   "jest": {
     "setupFilesAfterEnv": [

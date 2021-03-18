@@ -25,9 +25,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
-      - run: npm run bootstrap
-      - run: npm run test:pre-release
-      - run: npm run app-release
+      - run: yarn bootstrap
+      - run: yarn test:pre-release
+      - run: yarn app-release
         env:
           CSC_LINK: ${{ secrets.CORE_WINDOWS_CSC_LINK }}
           CSC_KEY_PASSWORD: ${{ secrets.CORE_WINDOWS_CSC_KEY_PASSWORD }}
@@ -42,9 +42,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
-      - run: npm run bootstrap
-      - run: npm run test:pre-release
-      - run: npm run app-release
+      - run: yarn bootstrap
+      - run: yarn test:pre-release
+      - run: yarn app-release
         env:
           APPLE_ID: ${{ secrets.DESIGNER_APPLE_ID }}
           APPLE_ID_PASSWORD: ${{ secrets.DESIGNER_APPLE_ID_PASSWORD }}
@@ -64,8 +64,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ steps.nvm.outputs.NVMRC }}
-      - run: npm run bootstrap
-      - run: npm run test:pre-release
-      - run: npm run app-release
+      - run: yarn bootstrap
+      - run: yarn test:pre-release
+      - run: yarn app-release
         env:
           BUILD_TARGETS: AppImage,deb,tar.gz,rpm,snap

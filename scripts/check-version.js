@@ -23,7 +23,7 @@ if (foundNodeVersion !== expectedNodeVersion) {
   );
   console.log();
   console.log(
-    `${BRIGHT}${YELLOW_FG}Remember to 'npm run clean && npm run bootstrap' after installing the expected version.${RESET}`,
+    `${BRIGHT}${YELLOW_FG}Remember to 'yarn clean && yarn bootstrap' after installing the expected version.${RESET}`,
   );
   console.log();
   process.exit(1);

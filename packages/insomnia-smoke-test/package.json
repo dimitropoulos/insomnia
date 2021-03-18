@@ -8,10 +8,10 @@
     "spectron:package": "cross-env BUNDLE=package xvfb-maybe jest --detectOpenHandles --testPathPattern core",
     "cli": "jest --detectOpenHandles --testPathPattern cli",
     "serve": "node server/index.js",
-    "with-mock": "concurrently --names server,app --success first --kill-others \"npm run serve\"",
-    "test:cli": "npm run with-mock \"npm run cli\"",
-    "test:build": "npm run with-mock \"npm run spectron:build\"",
-    "test:package": "npm run with-mock \"npm run spectron:package\""
+    "with-mock": "concurrently --names server,app --success first --kill-others \"yarn serve\"",
+    "test:cli": "yarn with-mock \"yarn cli\"",
+    "test:build": "yarn with-mock \"yarn spectron:build\"",
+    "test:package": "yarn with-mock \"yarn spectron:package\""
   },
   "jest": {
     "setupFilesAfterEnv": [

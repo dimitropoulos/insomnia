@@ -16,12 +16,12 @@
     "typecheck": "",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:snapshots": "npm run build && jest -u",
+    "test:snapshots": "yarn build && jest -u",
     "build": "webpack --config webpack/webpack.config.development.js --display errors-only",
     "build:production": "webpack --config webpack/webpack.config.production.js --display errors-only",
-    "start": "npm run build -- --watch",
-    "bootstrap": "npm run build",
-    "prepare": "npm run build:production"
+    "start": "yarn build -- --watch",
+    "bootstrap": "yarn build",
+    "prepare": "yarn build:production"
   },
   "jest": {
     "setupFiles": [
