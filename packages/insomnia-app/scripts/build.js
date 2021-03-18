@@ -40,7 +40,7 @@ module.exports.start = async function(forceFromGitRef) {
   } else {
     console.log(`[build] Starting build for ref "${buildContext.gitRef}"`);
   }
-  console.log(`[build] npm: ${childProcess.spawnSync('npm', ['--version']).stdout}`.trim());
+  console.log(`[build] npm: ${childProcess.spawnSync('yarn', ['--version']).stdout}`.trim());
   console.log(`[build] node: ${childProcess.spawnSync('node', ['--version']).stdout}`.trim());
 
   if (process.version.indexOf('v12.') !== 0) {
@@ -178,7 +178,7 @@ async function install(relDir) {
   return new Promise(resolve => {
     const prefix = path.resolve(__dirname, relDir);
 
-    const p = childProcess.spawn('npm', ['install', '--production', '--no-optional'], {
+    const p = childProcess.spawn('yarn', ['install', '--production', '--no-optional'], {
       cwd: prefix,
       shell: true,
     });

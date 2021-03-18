@@ -1,6 +1,8 @@
 {
   "tagVersionPrefix": "lib@",
   "version": "2.2.30",
+  "npmClient": "yarn",
+  "useWorkspaces": true,
   "includeMergedTags": true,
   "packages": [
     "packages/*",
